@@ -12,9 +12,7 @@ def count_max_substr(string):
         return res
 
     def update_res(res, char, counter):
-        if char not in res:
-            res[char] = counter
-        elif res[char] < counter:
+        if char not in res or res[char] < counter:
             res[char] = counter
 
     char_counter = 1
